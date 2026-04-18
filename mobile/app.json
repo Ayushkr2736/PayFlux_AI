@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "PayFlux AI",
+    "slug": "payflux-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0A0E1A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.payflux.ai"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0E1A"
+      },
+      "package": "com.payflux.ai"
+    },
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}
