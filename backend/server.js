@@ -139,6 +139,16 @@ async function startServer() {
   }
 }
 
-startServer();
+if (require.main === module) {
+  startServer();
+} else {
+  // Vercel Serverless Execution
+  try {
+    validateEnv();
+    connectDB().catch((err) => logger.error('MongoDB connection on serverless failed:', err));
+  } catch (error) {
+    logger.error('Failed to initialize serverless environment:', error);
+  }
+}
 
 module.exports = app; // Export for testing
